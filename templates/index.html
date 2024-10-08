@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books to Scrape</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <h1>Books to Scrape</h1>
+    </header>
+    
+    <section class="categories">
+        <h2>Categories</h2>
+        <ul>
+            {% for category in categories %}
+            <li><a href="{{ category.url }}">{{ category.name }}</a></li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <section class="books">
+        <h2>Books</h2>
+        <div class="book-list">
+            {% for book in books %}
+            <div class="book-item">
+                <h3>{{ book.title }}</h3>
+                <p>Price: {{ book.price }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+</body>
+</html>
