@@ -87,4 +87,30 @@ h1 {
         width: 100%;
         max-width: 300px;
     }
+    /* Estilos para el widget personalizado */
+    .widget4 {
+        text-align: center;
+        background-color: #f9f9f9;
+        padding: 2rem;
+        border-top: 2px solid #ccc;
+        margin-top: 2rem;
+    }
+
+    .widget4 h1 {
+        font-size: 1.5rem;
+        color: #333;
+    }
+
+    .widget4 p {
+        font-size: 1.2rem;
+        color: #666;
+    }
+
+    .centered {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
 }
