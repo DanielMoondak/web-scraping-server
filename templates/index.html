@@ -11,16 +11,16 @@
         <h1>Books to Scrape</h1>
     </header>
 
-    <div class="container">
+    <div class="main-container">
         <!-- Sección de Categorías -->
-        <section class="categories">
+        <aside class="categories">
             <h2>Categories</h2>
             <ul>
                 {% for category in categories %}
                 <li><a href="{{ category.url }}">{{ category.name }}</a></li>
                 {% endfor %}
             </ul>
-        </section>
+        </aside>
 
         <!-- Sección de Libros -->
         <section class="books">
@@ -36,17 +36,11 @@
         </section>
     </div>
 
-    <!-- Widget4 - Alumnos -->
-        <!-- Contenedor personalizado al final de la página -->
-        <div class="widget4 full-width">
-            <h1>Designed by: Moondak</h1>
-            <p>JDRV, DMFM, LGPM & SCB</p>
-            <!-- Aquí podrías integrar una gráfica en tiempo real si tienes los datos -->
-            <img src="/static/luna.gif" width="280px" alt="Weather icon" class="centered">
-        </div>
-    
-
-
-
+    <!-- Contenedor del widget4 -->
+    <div class="widget4">
+        <h1>Designed by: Moondak</h1>
+        <p>JDRV, DFM, GPM, & SCB</p>
+        <img src="/static/luna.gif" width="280px" alt="Weather icon" class="centered">
+    </div>
 </body>
 </html>
