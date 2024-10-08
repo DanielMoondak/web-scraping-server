@@ -17,24 +17,21 @@ h1 {
     margin: 0;
 }
 
-.container {
+.main-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-between;
     padding: 1rem;
 }
 
-.categories, .books {
-    width: 100%;
-    max-width: 1200px;
-    margin: 1rem 0;
+/* Categorías a la izquierda ocupando 20% del ancho */
+.categories {
+    width: 20%;
     padding: 1rem;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-right: 2px solid #ddd;
 }
 
-/* Categories */
+/* Lista de categorías */
 .categories ul {
     list-style: none;
     padding: 0;
@@ -45,7 +42,13 @@ h1 {
     font-size: 1.1rem;
 }
 
-/* Books */
+/* Libros a la derecha ocupando 80% del ancho */
+.books {
+    width: 80%;
+    padding: 1rem;
+    background-color: white;
+}
+
 .book-list {
     display: flex;
     flex-wrap: wrap;
@@ -67,11 +70,38 @@ h1 {
     font-size: 1.2rem;
 }
 
+/* Estilos para el widget personalizado */
+.widget4 {
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-top: 2px solid #ccc;
+    margin-top: 2rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.widget4 h1 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.widget4 p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
-    .container {
+    .main-container {
         flex-direction: column;
-        align-items: flex-start;
     }
 
     .categories, .books {
@@ -87,30 +117,4 @@ h1 {
         width: 100%;
         max-width: 300px;
     }
-    /* Estilos para el widget personalizado */
-    .widget4 {
-        text-align: center;
-        background-color: #f9f9f9;
-        padding: 2rem;
-        border-top: 2px solid #ccc;
-        margin-top: 2rem;
-    }
-
-    .widget4 h1 {
-        font-size: 1.5rem;
-        color: #333;
-    }
-
-    .widget4 p {
-        font-size: 1.2rem;
-        color: #666;
-    }
-
-    .centered {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-
 }
