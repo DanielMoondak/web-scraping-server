@@ -1,3 +1,4 @@
+/* General styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -16,10 +17,24 @@ h1 {
     margin: 0;
 }
 
-.categories, .books {
-    margin: 2rem;
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
 }
 
+.categories, .books {
+    width: 100%;
+    max-width: 1200px;
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Categories */
 .categories ul {
     list-style: none;
     padding: 0;
@@ -27,8 +42,10 @@ h1 {
 
 .categories li {
     margin: 0.5rem 0;
+    font-size: 1.1rem;
 }
 
+/* Books */
 .book-list {
     display: flex;
     flex-wrap: wrap;
@@ -43,13 +60,24 @@ h1 {
     padding: 1rem;
     width: 200px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 .book-item h3 {
     font-size: 1.2rem;
 }
 
-@media (max-width: 600px) {
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .categories, .books {
+        width: 100%;
+    }
+
     .book-list {
         flex-direction: column;
         align-items: center;
