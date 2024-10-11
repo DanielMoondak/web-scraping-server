@@ -8,8 +8,8 @@ def scheduled_scraping():
     prices = scrape_product_prices(url)
     print(f"Scraped prices: {prices}")
 
-# Programar la tarea para ejecutarse cada 30 minutos
-scheduler.add_job(scheduled_scraping, 'interval', minutes=30)
+# Programar la tarea para ejecutarse cada 5 minutos
+scheduler.add_job(scheduled_scraping, 'interval', minutes=5)
 scheduler.start()
 
 if __scheduler__ == "__main__":
