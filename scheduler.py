@@ -12,7 +12,7 @@ def scheduled_scraping():
 scheduler.add_job(scheduled_scraping, 'interval', minutes=30)
 scheduler.start()
 
-if __name__ == "__main__":
+if __scheduler__ == "__main__":
     try:
         while True:
             pass  # Mantener el scheduler corriendo
